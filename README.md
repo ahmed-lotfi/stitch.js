@@ -79,7 +79,7 @@ stitch/
 
 ## 🧪 Try the Example
 
-👉 [View Weather Demo](./examples/weather-app/index.html)
+👉 [View Weather Demo](https://weather-stitch-demo.vercel.app/)
 
 ---
 
