@@ -1,0 +1,44 @@
+:root {
+  --bg-light: #ffffff;
+  --text-light: #1a1a1a;
+  --bg-dark: #121212;
+  --text-dark: #eaeaea;
+  --accent: #5a31f4;
+}
+
+[data-theme="light"] {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid currentColor;
+  background: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+}
