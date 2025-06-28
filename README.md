@@ -97,6 +97,6 @@ MIT License. Free to use, modify, and share.
 
 ## ✨ Author
 
-Built with care by [Ahmed Lotfi](https://github.com/AhmedLotfi8)
+Built with care by [Ahmed Lotfi](https://github.com/ahmed-lotfi)
 
 
