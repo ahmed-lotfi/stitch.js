@@ -1,7 +1,8 @@
+
 # 🧵 Stitch.js
 
 <p align="center">
-  <img src="./public/logo.png" alt="Stitch.js Logo" width="120" align="center" />
+  <img src="./public/logo.png" alt="Stitch.js Logo" width="120" />
 </p>
 
 <h1 align="center">Stitch.js 🧵</h1>
@@ -22,37 +23,42 @@
 
 ---
 
-## 📦 Installation
+## 📦 Installation (via npm + Vite)
 
-Just include the script in your project:
-
-```html
-<script type="module" src="./stitch.js"></script>
-```
-
-Or import it in your JS file:
-
-```js
-import { reactive, createEffect, render } from "./stitch.js";
-```
+```bash
+npm create vite@latest my-app -- --template vanilla
+cd my-app
+npm install
+npm install stitchjs-mini
+npm run dev
+````
 
 ---
 
-## 🧠 Example
+## 🔌 Usage
 
 ```js
+// main.js
+import { reactive, createEffect, render } from "stitchjs-mini";
+
 const state = reactive({ count: 0 });
 
 createEffect(() => {
-  render(
-    "#app",
-    `<button onclick="increment()">Count: ${state.count}</button>`
-  );
-});
+  render("#app", `
+    <h1>Count: ${state.count}</h1>
+    <button id="inc">Increment</button>
+  `);
 
-function increment() {
-  state.count++;
-}
+  document.getElementById("inc").onclick = () => {
+    state.count++;
+  };
+});
+```
+
+```html
+<!-- index.html -->
+<div id="app"></div>
+<script type="module" src="/main.js"></script>
 ```
 
 ---
@@ -61,17 +67,17 @@ function increment() {
 
 ```
 stitch/
-├── core/           # Core reactivity logic
-├── docs/           # Entry page, logo, theme toggle
-├── examples/       # Demos like weather-app
-├── public/         # Assets like logo.svg
-├── stitch.js       # Framework entry point
+├── src/            # Core framework modules
+├── docs/           # Landing page (with theme toggle)
+├── examples/       # Demo apps like weather-app
+├── public/         # Logo and shared assets
+├── package.json    # npm package config
 └── README.md
 ```
 
 ---
 
-## 🧪 Try It
+## 🧪 Try the Example
 
 👉 [View Weather Demo](./examples/weather-app/index.html)
 
@@ -79,13 +85,13 @@ stitch/
 
 ## 🌗 Theme Support
 
-The homepage includes light/dark mode toggling via a simple `<button>`.
+The homepage supports toggling between light and dark themes.
 
 ---
 
 ## 📌 License
 
-MIT License. Use it freely and build something awesome.
+MIT License. Free to use, modify, and share.
 
 ---
 
@@ -93,7 +99,4 @@ MIT License. Use it freely and build something awesome.
 
 Built with care by [Ahmed Lotfi](https://github.com/AhmedLotfi8)
 
-```
 
-
-```
